@@ -157,18 +157,6 @@ li{
     text-align: justify;
 }
 
-@media (max-width: 400px) {
-    .about-container > .para {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 400px) {
-    #button {
-        width: 20vw;
-    }
-}
-
 #page2{
     height: 100vh;
     width: 100%;
@@ -186,6 +174,7 @@ li{
 
 .wrapper-head {
     color: #2AFC98;
+    margin-top: 40px;
     margin-bottom: 60px;
 }
 
@@ -231,23 +220,24 @@ li{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0); /* Initial transparent background */
+    background: rgba(0, 0, 0, 0); 
     z-index: 1;
     transition: background 0.3s ease; 
 }
 
 .card:hover::before {
-    background: rgba(0, 0, 0, 0.6); /* Darken the background on hover */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
 .card:hover {
-    filter: grayscale(0%); /* Remove grayscale effect on hover */
+    filter: grayscale(0%); 
 }
 
 .description {
     position: relative;
-    z-index: 2; /* Ensure the description is above the dark overlay */
+    z-index: 2; 
     transition: color 0.3s ease;
+    text-align: center;
 }
 
 .card:hover .description h2 {
@@ -257,7 +247,14 @@ li{
 
 .card:hover .description p {
     color: white; 
+    text-align: justify;
     transition: color 0.3s ease;
+}
+
+.card:hover .description .checkb {
+    border: 0;
+    background-color: #2AFC98;
+    color: black;
 }
 
 .card > .row {
@@ -265,19 +262,7 @@ li{
     display: flex;
     flex-wrap: nowrap;
     width: 600px;
-    margin-bottom: 20px;
-}
-
-.card > .row > .icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
+    height: 180px;
 }
 
 .card > .row > .description {
@@ -286,7 +271,6 @@ li{
     flex-direction: column;
     overflow: hidden;
     z-index: 2;
-    height: 150px;
     width: 600px;
     opacity: 0;
     transform: translateY(30px);
@@ -306,6 +290,19 @@ li{
     text-align: center;
     color: whitesmoke;
     padding-top: 5px;
+}
+
+.btn-con .checkb {
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border: 0;
+    background-color: #2AFC98;
+}
+
+.btn-con {
+   padding-top: 10px;
 }
 
 input {
@@ -334,88 +331,16 @@ input:checked + label .description {
     background-image: url('Cards/finearts.jpeg');
 }
 
-/* RESPONSIVE CARDS */
-@media (max-width: 768px) {
-    .container {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .card {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .card > .row {
-        width: 768px;
-        justify-content: center;
-    }
-    .card > .row > .description {
-        width: 768px;
-        padding: 10px;
-    }
-
-    .card > .row > .description > .p {
-        text-align: center;
-    }
-
-    .card > .row > .description > .h2 {
-        text-align: center;
-    } 
-
-    input:checked + label {
-        width: 100%;
-    }
-    
-    .card > .row > .description {
-        width: 90%;
-    }
-}
-
-@media (max-width: 450px) {
-    #page1 {
-        height: 70vh;
-    }
-    #page2 { 
-        height: 120vh;
-    }
-    .wrapper-head {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    .card {
-        width: 390px;
-        margin: 5px 0;
-    }
-
-    .card > .row {
-        padding: 0;
-        margin: 0;
-    }
-
-    .card > .row > .description {
-        width: 390px;
-    }
-
-    .card > .row > .description > .p {
-        text-align: center;
-    }
-
-    .card > .row > .description > .h2 {
-        text-align: center;
-    }
-
-    input:checked + label {
-        width: 80%;
-    }
-}
-
 #page3{
     height: 100vh;
     width: 100vw;
     background-color: black;
 }
+
+.title-in {
+    text-align: center;
+}
+
 #page4{
     height: 150vh;
     width: 100vw;
@@ -458,41 +383,10 @@ input:checked + label .description {
   display: block;
 }
 
-@media (max-width: 450px) {
-    #page4 {
-        height: 210vh;
-    }
-    #highlight > #title {
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    #highlight > #con {
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 20px;
-    }
-
-    #con > #p {
-        text-align: center;
-    }
-
-    #highlight > .main > .gallery {
-        flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .pics > .xx {
-        height: auto;
-        width: 360px;
-    }
-}
-
 #page5{
     height: 100vh;
     width: 100vw;
-    background-color: lavender;
+    background-color: #2AFC98;
 }
 #dev{
     height: 90vh;
@@ -553,4 +447,262 @@ input:checked + label .description {
 
 .dropdown_menu li a{
     text-decoration-line: none;
+    color: #2AFC98;
+}
+
+
+/* RESPONSIVE CARDS */
+@media (max-width: 920px) {
+    #page2 {
+        height: 150vh;
+    }
+    .wrapper {
+        height: 150vh;
+    }
+    .container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #button {
+        width: 90px;
+    }
+
+    .about-container > .para {
+        font-size: 20px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 450px;
+        margin: 15px 0;
+    }
+
+    .card > .row {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+    .card > .row > .description {
+        width: 768px;
+        padding: 10px;
+    }
+
+    .card > .row > .description > .p {
+        text-align: center;
+    }
+
+    .card > .row > .description > .h2 {
+        text-align: center;
+    } 
+
+    .card-title {
+        margin-left: 350px;
+    }
+
+    .btn-con .checkb {
+        text-align: center;
+        justify-content: center;
+        border: 0;
+        background-color: #2AFC98;
+    }
+    
+    .btn-con {
+       padding-top: 10px;
+    }
+
+    input:checked + label {
+        width: 100%;
+    }
+}
+
+@media (max-width: 610px) {
+    #page1 {
+        height: 70vh;
+    }
+    #page2 { 
+        height: 150vh;
+    }
+    .wrapper-head {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .card {
+        margin: 5px 0;
+    }
+
+    .card > .row {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card > .row > .description {
+        width: 120%;
+    }
+
+    .card > .row > .description > .p {
+        text-align: center;
+    }
+
+    .card > .row > .description > .h2 {
+        text-align: center;
+    }
+
+    input:checked + label {
+        width: ;
+    }
+
+    #page4 {
+        height: 210vh;
+    }
+    #highlight > #title {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #highlight > #con {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    #con > #p {
+        text-align: center;
+    }
+
+    #highlight > .main > .gallery {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .pics > .xx {
+        height: auto;
+        width: 360px;
+    }
+
+    #button {
+        width: 20vw;
+    }
+
+    .about-container > .para {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #page1 {
+        height: 70vh;
+    }
+    #page2 { 
+        height: 160vh;
+    }
+    #page4 {
+        height: 1500px;
+    }
+    .wrapper-head {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+       max-width: 98%;
+    }
+    .card {
+        max-width: 98%;
+        height: 210px;
+        transform: none;
+        transition: none;
+    }
+
+    .card-title {
+        margin: 0;
+    }
+
+    .card > .row {
+        height: 210px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card > .row > .description {
+        max-width: 390px;
+    }
+
+    .card > .row > .description > .p {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .card > .row > .description > .h2 {
+        text-align: center;
+    }
+
+    input:checked + label {
+        width: 100%;
+    }
+
+    #page4 {
+        height: 210vh;
+    }
+    #highlight > #title {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #highlight > #con {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    #con > #p {
+        text-align: center;
+    }
+
+    #highlight > .main > .gallery {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .pics > .xx {
+        height: auto;
+        width: 360px;
+    }
+
+    #button {
+        width: 20vw;
+    }
+
+    .about-container h1 {
+        color: #2AFC98;
+    }
+
+    .about-container > .para {
+        font-size: 10px;
+        color: white;
+    }
+
+    .about-container {
+        padding: 30px; /* Padding for inner spacing */
+        background-color: black; /* White background */
+        width: 800px; /* Width of the inner div */
+        text-align: center; /* Center the text inside */
+        transition: color 0.3s ease;
+    }
+
+    .about-container:hover {
+        transform: none;
+    }
+    
 }

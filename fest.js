@@ -131,10 +131,31 @@ data.forEach((item, index) => {
   }
 
   // Media query for max-width: 400px
-  const mediaQuery = window.matchMedia("(max-width: 450px)");
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
   mediaQuery.addEventListener('change', handleScreenResize);
 
   // Initial check when page loads
   if (mediaQuery.matches) {
       removeBrTags();
   }
+
+
+
+
+
+// onclick the card redirect to registration site
+    function card1() {
+      window.location.href = ""; 
+    }
+    function card2() {
+      window.location.href = ""; 
+    }
+    function card3() {
+      window.location.href = ""; 
+    }
+    function card4() {
+      window.location.href = ""; 
+    }
+    function register() {
+      window.location.href = ""; 
+    }
